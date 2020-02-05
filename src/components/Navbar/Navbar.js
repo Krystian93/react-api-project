@@ -1,17 +1,15 @@
 import React from "react"
-
+import {NavLink } from "react-router-dom";
+import './index.css'
 const Navbar = () =>{
     return(
         <nav className="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
                 <ul className="navbar-nav ">
-                    <li className="nav-item active">
-                        <a className="nav-link" href="/h">Home <span className="sr-only">(current)</span></a>
+                    <li className="nav-item">
+                        <NavLink activeClassName="selected" className="nav-link" to="/characters">Characters</NavLink>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/f">Features</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="/p">Pricing</a>
+                        <NavLink activeClassName="selected" className="nav-link" to="/about">About</NavLink>
                     </li>
                 </ul>
         </nav>
